@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "phrygia", // Usually your GitHub org/user name.
-  projectName: "Today phrygia Learned", // Usually your repo name.
+  projectName: "phrygia-TIL", // Usually your repo name.
 
   presets: [
     [
