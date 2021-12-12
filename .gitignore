@@ -1,4 +1,6 @@
-.docz
+.cache
 node_modules 
 .env.production
 .env.development
+
+public
