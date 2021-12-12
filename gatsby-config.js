@@ -4,6 +4,7 @@ module.exports = {
         name: `Code Bushi`,
         siteUrl: `https://phrygia.github.io/phrygia-TIL/`,
         description: `This is my description that will be used in the meta tags and important for search results`,
+        pathPrefix: `/phrygia-TIL`,
         social: [
             {
                 name: `github`,
