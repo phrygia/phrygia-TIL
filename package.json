@@ -6,7 +6,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "gatsby develop",
-        "build": "gatsby build"
+        "build": "gatsby build",
+        "deploy": "gatsby build && gh-pages -d public -b gh-pages"
     },
     "dependencies": {
         "@theme-ui/prism": "^0.3.0",
