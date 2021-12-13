@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/phrygia-TIL`,
   siteMetadata: {
     title: `Today phrygia Learned`,
     name: `phrygia`,
