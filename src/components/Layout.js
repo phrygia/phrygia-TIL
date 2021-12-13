@@ -12,7 +12,7 @@ import RightSidebar from './RightSidebar';
 const Layout = ({ children, tableOfContents, location }) => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <Styled.root>
+    <Styled>
       <Global styles={globalStyles} />
       <Header navOpen={navOpen} setNavOpen={setNavOpen} />
       <SiteWrapper>
@@ -24,7 +24,7 @@ const Layout = ({ children, tableOfContents, location }) => {
           <RightSidebar tableOfContents={tableOfContents} location={location} />
         )}
       </SiteWrapper>
-    </Styled.root>
+    </Styled>
   );
 };
 

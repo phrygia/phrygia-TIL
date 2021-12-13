@@ -1,16 +1,17 @@
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import React from 'react';
-import useCycleColor from '../hooks/useCycleColor';
-import mediaqueries from '../styles/media';
-import ColorToggle from './icons/ColorToggle';
-import IconButton from './icons/IconButton';
-import Menu from './icons/Menu';
-import LogoWrapper from './LogoWrapper';
-import SocialIcons from './SocialIcons';
+import styled from "@emotion/styled";
+import PropTypes from "prop-types";
+import React from "react";
+// import useCycleColor from "../hooks/useCycleColor";
+import mediaqueries from "../styles/media";
+// import ColorToggle from "./icons/ColorToggle";
+import IconButton from "./icons/IconButton";
+import Menu from "./icons/Menu";
+import LogoWrapper from "./LogoWrapper";
+import SocialIcons from "./SocialIcons";
+import "../global.css";
 
 const Header = ({ navOpen, setNavOpen }) => {
-  const { cycleColorMode } = useCycleColor();
+  // const { cycleColorMode } = useCycleColor();
   return (
     <StyledHeader navOpen={navOpen}>
       <HeaderSection>
@@ -28,12 +29,12 @@ const Header = ({ navOpen, setNavOpen }) => {
       </HeaderSection>
       <HeaderSection>
         <SocialIcons />
-        <IconButton
+        {/* <IconButton
           label="Change Theme Color"
           icon={<ColorToggle />}
           size={30}
           onClick={cycleColorMode}
-        />
+        /> */}
       </HeaderSection>
     </StyledHeader>
   );
@@ -45,10 +46,10 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1rem 1rem;
   z-index: 5;
-  background: ${p => p.theme.colors.background};
+  background: ${(p) => p.theme.colors.background};
   transition: all 0.25s var(--ease-in-out-quad);
-  border-bottom: 1px solid ${p => p.theme.colors.borderColor};
-  transform: ${p => (p.navOpen ? `translateX(16rem)` : null)};
+  border-bottom: 1px solid ${(p) => p.theme.colors.borderColor};
+  transform: ${(p) => (p.navOpen ? `translateX(16rem)` : null)};
   ${mediaqueries.desktop_up`
     position: fixed;
     top: 0;
@@ -75,7 +76,7 @@ const HeaderSection = styled.div`
 
 Header.propTypes = {
   navOpen: PropTypes.bool,
-  setNavOpen: PropTypes.func
+  setNavOpen: PropTypes.func,
 };
 
 export default Header;
