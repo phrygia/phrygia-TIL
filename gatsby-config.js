@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
     sidebarConfig: {
-      forcedNavOrder: ["/", "/monthly", "/codeblock"],
+      forcedNavOrder: ["/", "/monthly", "/git"],
       ignoreIndex: false,
     },
   },
