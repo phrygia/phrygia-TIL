@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap");
+
+* 
+  font-family: "Noto Sans KR", sans-serif;
+.sidebar-links > li .sidebar-group > .sidebar-heading 
+    cursor: pointer !important
+    background: url(downward-arrow.png) no-repeat
+.sidebar-links > li .sidebar-group > .sidebar-heading + ul 
+    display: none
+.sidebar-links > li .sidebar-group > .sidebar-heading.open + ul {
+    display: block
+}
