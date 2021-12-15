@@ -4,7 +4,7 @@ module.exports = {
     title: `Today phrygia Learned`,
     name: `phrygia`,
     siteUrl: `https://phrygia.github.io/phrygia-TIL/`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: ``,
     social: [
       {
         name: `github`,
@@ -24,7 +24,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: `G-NMYSHMN3DT`, // 측정 ID
+        trackingId: `G-NMYSHMN3DT
+        `, // 측정 ID
         head: false, // head에 tracking script를 넣고 싶다면 true로 변경
         anonymize: true,
       },

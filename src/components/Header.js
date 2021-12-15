@@ -46,9 +46,9 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 1rem 1rem;
   z-index: 5;
-  background: ${(p) => p.theme.colors.background};
+  background: #fff;
   transition: all 0.25s var(--ease-in-out-quad);
-  border-bottom: 1px solid ${(p) => p.theme.colors.borderColor};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   transform: ${(p) => (p.navOpen ? `translateX(16rem)` : null)};
   ${mediaqueries.desktop_up`
     position: fixed;

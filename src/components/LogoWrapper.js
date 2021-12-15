@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import React from 'react';
-import Logo from '../logo.mdx';
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import React from "react";
+import Logo from "../logo.mdx";
 
 const LogoWrapper = () => (
   <StyledLogoWrapper>
@@ -21,11 +21,11 @@ const StyledLogoWrapper = styled.div`
 const LogoLink = styled(Link)`
   display: block;
   text-decoration: none;
-  color: ${p => p.theme.colors.text};
-  transition: color ${p => p.theme.transition};
+  color: #000;
+  /* transition: color ${(p) => p.theme.transition}; */
   &:hover,
   &:focus {
-    color: ${p => p.theme.colors.primary};
+    color: #e63b19;
   }
 `;
 

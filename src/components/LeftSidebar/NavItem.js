@@ -1,36 +1,36 @@
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import React, { useContext } from 'react';
-import { GlobalDispatchContext, GlobalStateContext } from '../../context/GlobalContextProvider';
-import ButtonCollapse from '../ButtonCollapse';
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import React, { useContext } from "react";
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../../context/GlobalContextProvider";
+import ButtonCollapse from "../ButtonCollapse";
 
-const NavItem = ({ items, url = '', title = '' }) => {
+const NavItem = ({ items, url = "", title = "" }) => {
   const state = useContext(GlobalStateContext);
   const dispatch = useContext(GlobalDispatchContext);
   const isCollapsed = state.collapsed[url];
   const hasChildren = items && items.length > 0;
   return (
     <StyledNavItem>
-      {title !== '' && (
-      <NavItemLink to={url} activeClassName="is-active">
-        {title}
-      </NavItemLink>
+      {title !== "" && (
+        <NavItemLink to={url} activeClassName="is-active">
+          {title}
+        </NavItemLink>
       )}
-      {hasChildren && title !== '' && (
+      {hasChildren && title !== "" && (
         <ButtonCollapse
           onClick={() => {
-            dispatch({ type: 'TOGGLE_NAV_COLLAPSED', url: url });
+            dispatch({ type: "TOGGLE_NAV_COLLAPSED", url: url });
           }}
           isCollapsed={isCollapsed}
         />
       )}
       {hasChildren && !isCollapsed && (
         <NavItemChild>
-          {items.map(item => (
-            <NavItem
-              key={item.url}
-              {...item}
-              />
+          {items.map((item) => (
+            <NavItem key={item.url} {...item} />
           ))}
         </NavItemChild>
       )}
@@ -51,21 +51,21 @@ const NavItemLink = styled(Link)`
   display: block;
   padding: 0.5rem 1.8rem 0.5rem 1.2rem;
   width: 100%;
-  color: ${p => p.theme.colors.text};
+  color: #000;
   font-weight: 600;
   text-decoration: none;
-  transition: color ${p => p.theme.transition};
+  /* transition: color ${(p) => p.theme.transition}; */
   &:hover,
   &:focus,
   &.is-active {
-    color: ${p => p.theme.colors.primary};
+    color: #e63b19;
   }
 `;
 
 const NavItemChild = styled.ul`
   margin: 0.5rem 0 0.5rem 1.2rem;
   padding: 0;
-  border-left: 1px solid ${p => p.theme.colors.text};
+  border-left: 1px solid #333;
   list-style: none;
   & > li {
     margin: 0;

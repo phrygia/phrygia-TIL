@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
-import React from 'react';
-import mediaqueries from '../../styles/media';
-import Navigation from './Navigation';
+import styled from "@emotion/styled";
+import PropTypes from "prop-types";
+import React from "react";
+import mediaqueries from "../../styles/media";
+import Navigation from "./Navigation";
 
 const LeftSidebar = ({ navOpen }) => {
   return (
@@ -32,9 +32,9 @@ const LeftSidebarNav = styled.nav`
   width: 16rem;
   height: 100%;
   padding: 1rem 0;
-  background: ${p => p.theme.colors.sidebar};
+  background: #eee;
   transition: 0.25s var(--ease-in-out-quad);
-  transform: ${p => (p.navOpen ? `translateX(16rem)` : null)};
+  transform: ${(p) => (p.navOpen ? `translateX(16rem)` : null)};
   ${mediaqueries.desktop_up`
     transform: translateX(0);
     padding: 6.6rem 0 1rem;
@@ -42,7 +42,7 @@ const LeftSidebarNav = styled.nav`
 `;
 
 LeftSidebar.propTypes = {
-  navOpen: PropTypes.bool
+  navOpen: PropTypes.bool,
 };
 
 export default React.memo(LeftSidebar);
