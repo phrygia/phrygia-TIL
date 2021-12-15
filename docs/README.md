@@ -39,13 +39,13 @@
 }
 @media screen and (min-width: 541px) {
   .py_tit h1 {
-    max-width: 600px;
+    max-width: 700px;
     margin:0 auto  !important;
     padding: 60px 0 15px;
     font-size: 4.8rem !important;
   }
   .py_info {
-    max-width: 600px;
+    max-width: 700px;
     margin: 40px auto 0;
     padding-bottom: 80px;
   }
@@ -53,6 +53,7 @@
     font-size: 25px !important;
   }
   .py_info a {
+    margin-bottom: 5px;
     font-size: 15px !important;
   }
   #gatsby-focus-wrapper > div:first-child > header + div > aside > nav {

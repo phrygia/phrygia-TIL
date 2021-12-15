@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 set -e
 
-# change the GIT_REPO with the correct URL
-readonly GIT_REPO=https://github.com/phrygia/phrygia-TIL.git
-
 # build
 npm run build
 
@@ -21,7 +18,7 @@ git commit -m 'deploy with vuepress'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f <뷰 프레스를 위해 생성한 깃헙 리포지토리의 클론 주소> master:gh-pages
+git push -f https://github.com/phrygia/phrygia-TIL.git master:gh-pages
 
 cd -
  

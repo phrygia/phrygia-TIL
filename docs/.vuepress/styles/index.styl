@@ -2,11 +2,53 @@
 
 * 
   font-family: "Noto Sans KR", sans-serif;
-.sidebar-links > li .sidebar-group > .sidebar-heading 
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading 
+    position: relative
     cursor: pointer !important
-    background: url(downward-arrow.png) no-repeat
-.sidebar-links > li .sidebar-group > .sidebar-heading + ul 
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading:after 
+    position: absolute
+    top: 15px
+    right: 15px
+    content: ""
+    display: block
+    width: 20px
+    height: 20px
+    background: no-repeat top center/ 15px url('https://raw.githubusercontent.com/phrygia/phrygia-TIL/master/docs/.vuepress/styles/downward-arrow.png') 
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading + ul 
     display: none
-.sidebar-links > li .sidebar-group > .sidebar-heading.open + ul {
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading.open
+    color: #0075ff
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading.open + ul {
     display: block
 }
+
+.sidebar-links > li .sidebar-group > p.sidebar-heading.open:after {
+    transform: rotate(180deg)
+    top: 9px
+}
+
+a.sidebar-link.active
+    border-color: transparent !important
+
+.navbar .links > .search-box > ul.suggestions:hover *,
+.navbar .links > .search-box > ul.suggestions *:hover
+    color: #222 !important
+
+.navbar a:hover,
+.navbar a:hover .site-name
+    color: #0075ff !important
+
+.sidebar > .sidebar-links > li > a.sidebar-link
+    font-size: 1em !important
+
+.navbar .site-name
+    font-size: 1.2rem !important
+    letter-spacing: -0.5px
+
+.sidebar > .sidebar-links > li:not(:first-child) 
+    margin-top:0.2rem !important
