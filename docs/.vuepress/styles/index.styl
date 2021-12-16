@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap");
 
 * 
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif
+  box-sizing: border-box
 
 .sidebar-links > li .sidebar-group > p.sidebar-heading 
     position: relative
@@ -9,13 +10,15 @@
 
 .sidebar-links > li .sidebar-group > p.sidebar-heading:after 
     position: absolute
-    top: 15px
+    top: 11px
     right: 15px
     content: ""
     display: block
     width: 20px
     height: 20px
-    background: no-repeat top center/ 15px url('https://raw.githubusercontent.com/phrygia/phrygia-TIL/master/docs/.vuepress/styles/downward-arrow.png') 
+    background: no-repeat top center/ 15px url('https://raw.githubusercontent.com/phrygia/phrygia-TIL/master/docs/.vuepress/styles/downward-arrow.png')
+    transition: all .15s 
+    transform: rotate(270deg)
 
 .sidebar-links > li .sidebar-group > p.sidebar-heading + ul 
     display: none
@@ -28,12 +31,10 @@
 }
 
 .sidebar-links > li .sidebar-group > p.sidebar-heading.open:after {
-    transform: rotate(180deg)
-    top: 9px
+    transform: rotate(360deg)
+    top: 12px
+    right: 17px;
 }
-
-a.sidebar-link.active
-    border-color: transparent !important
 
 .navbar .links > .search-box > ul.suggestions:hover *,
 .navbar .links > .search-box > ul.suggestions *:hover
