@@ -15,7 +15,10 @@ module.exports = {
     themeConfig: {
         lastUpdated: 'Last Updated',
         docsDir: 'docs',
-        nav: [{ text: 'Github', link: 'https://github.com/phrygia' }],
+        nav: [
+            { text: 'Github', link: 'https://github.com/phrygia' },
+            { text: 'Blog', link: 'https://phrygia.github.io/' },
+        ],
         sidebar: [
             ['/', 'HOME'],
             // ["/git", "Git"],

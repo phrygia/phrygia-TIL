@@ -22,3 +22,4 @@ git push -f https://github.com/phrygia/phrygia-TIL.git master:gh-pages
 
 cd -
  
+# sh deploy.sh

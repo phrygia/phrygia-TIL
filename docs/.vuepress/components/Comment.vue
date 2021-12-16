@@ -1,5 +1,21 @@
 <template>
-    <div ref="comment"></div>
+    <div>
+        <div class="phrygia_info_post">
+            <dl>
+                <dt>
+                    <img
+                        src="https://phrygia.github.io/static/phrygia-c14fc3043cf0982ab6c58276a5308c8a.jpg"
+                        alt="phrygia"
+                    />
+                </dt>
+                <dd>
+                    <strong>Chaeyeon Lee (phrygia)</strong>
+                    <p>잘못된 부분이 있다면 댓글 부탁드립니다 -*</p>
+                </dd>
+            </dl>
+        </div>
+        <div ref="comment"></div>
+    </div>
 </template>
 <script>
 export default {

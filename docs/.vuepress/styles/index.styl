@@ -53,3 +53,72 @@
 
 .sidebar > .sidebar-links > li:not(:first-child) 
     margin-top:0.2rem !important
+
+.phrygia_info_post {
+  margin: 50px auto 0;
+}
+
+.phrygia_info_post dl 
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+.phrygia_info_post dl dt 
+    width: 146px
+    height: 140px
+    overflow: hidden
+
+.phrygia_info_post dl dt img 
+    width: 140px
+    height: 140px
+    margin: 0
+    border-radius: 100%
+    border: 1px solid #f1f1f1
+
+.phrygia_info_post dl dd 
+    margin-left: 25px
+    width: -webkit-calc(100% - 142px)
+    width: calc(100% - 142px)
+
+.phrygia_info_post dl dd strong 
+    color: #323232
+    font-size: 18px
+    letter-spacing: -1px
+
+.phrygia_info_post dl dd p 
+    word-break: break-all;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ababab;
+    font-weight: 300;
+
+@media (max-width: 767px) 
+    .phrygia_info_post dl 
+        padding: 15px 15px 10px;
+        
+    .phrygia_info_post dt 
+        width: 72px;
+
+    .phrygia_info_post dt img
+        width: 70px;
+        height: 70px;
+
+    .phrygia_info_post dd 
+        margin-left: 15px;
+        width: -webkit-calc(100% - 72px);
+        width: calc(100% - 72px);
+
+    .phrygia_info_post dd strong 
+        font-size: 1.1em;
+        
+    .phrygia_info_post dd p 
+        margin-top: 8px;
+        font-size: 0.85em;
+        line-height: 1.4;
+
+.search-box 
+    margin-right: 0 !important
+
+.nav-links .nav-item 
+    margin-left: 1rem !important
