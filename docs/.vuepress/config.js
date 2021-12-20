@@ -21,13 +21,24 @@ module.exports = {
         ],
         sidebar: [
             ['/', 'HOME'],
-            // ["/git", "Git"],
             {
-                title: 'Git', // required
-                // path: "/git/gits/", // optional, link of the title, which should be an absolute path and must exist
-                collapsable: false, // optional, defaults to true
-                sidebarDepth: 1, // optional, defaults to 1
+                title: 'Web',
+                // path: "/git/gits/",
+                collapsable: false,
+                sidebarDepth: 1,
+                children: ['/web/browsers-repository'],
+            },
+            {
+                title: 'Git',
+                collapsable: false,
+                sidebarDepth: 1,
                 children: ['/git/git-basic'],
+            },
+            {
+                title: 'Other',
+                collapsable: false,
+                sidebarDepth: 1,
+                children: ['/other/about'],
             },
         ],
         toggleSidebar: 'toggle sidebar',
