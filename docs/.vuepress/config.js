@@ -34,12 +34,12 @@ module.exports = {
                 sidebarDepth: 1,
                 children: ['/git/git-basic'],
             },
-            {
-                title: 'Other',
-                collapsable: false,
-                sidebarDepth: 1,
-                children: ['/other/about'],
-            },
+            // {
+            //     title: 'Other',
+            //     collapsable: false,
+            //     sidebarDepth: 1,
+            //     children: ['/other/about'],
+            // },
         ],
         toggleSidebar: 'toggle sidebar',
         toggleDarkMode: 'toggle dark mode',
