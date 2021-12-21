@@ -1,3 +1,6 @@
+const path = require('path')
+let {getArticles} = require(path.resolve('docs/.vuepress/dong_util'))
+
 module.exports = {
     title: 'Today phrygia Learned',
     description: '',
@@ -23,16 +26,15 @@ module.exports = {
             ['/', 'HOME'],
             {
                 title: 'Web',
-                // path: "/git/gits/",
-                collapsable: false,
+                collapsable: true,
                 sidebarDepth: 1,
-                children: ['/web/browsers-repository'],
+                children: getArticles('web')
             },
             {
                 title: 'Git',
-                collapsable: false,
+                collapsable: true,
                 sidebarDepth: 1,
-                children: ['/git/git-basic'],
+                children: getArticles('git')
             },
             // {
             //     title: 'Other',

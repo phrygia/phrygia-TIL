@@ -1,5 +1,5 @@
 ---
-title: '스토리지'
+title: 'Storage, Cookie'
 ---
 
 ## 브라우저 저장소 (Web Storage)
