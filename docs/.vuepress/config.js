@@ -10,7 +10,7 @@ module.exports = {
       },
     ],
   ],
-  plugins: [],
+  plugins: [["sitemap", { hostname: "https://phrygia.github.io/phrygia-TIL/" }]],
   base: "/phrygia-TIL/",
   themeConfig: {
     lastUpdated: "Last Updated",
