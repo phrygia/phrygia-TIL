@@ -4,10 +4,10 @@ module.exports = {
   head: [
     [
       "meta",
-        { 
-          name: 'google-site-verification', 
-          content: 'Qwl1ByUT9JKdKH-gShcyEFtOESV8O62F4LH-zNIjiQw' 
-        },
+      {
+        name: "google-site-verification",
+        content: "Qwl1ByUT9JKdKH-gShcyEFtOESV8O62F4LH-zNIjiQw",
+      },
     ],
     [
       "link",
@@ -23,9 +23,17 @@ module.exports = {
         src: "https://www.googletagmanager.com/gtag/js?id=G-NMYSHMN3DT",
       },
     ],
-    ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-NMYSHMN3DT');"]],
+    [
+      "script",
+      {},
+      [
+        "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-NMYSHMN3DT');",
+      ],
+    ],
   ],
-  plugins: [["sitemap", { hostname: "https://phrygia.github.io/phrygia-TIL/" }]],
+  plugins: [
+    ["sitemap", { hostname: "https://phrygia.github.io/phrygia-TIL/" }],
+  ],
   base: "/phrygia-TIL/",
   themeConfig: {
     lastUpdated: "Last Updated",
@@ -37,16 +45,32 @@ module.exports = {
     sidebar: [
       ["/", "HOME"],
       {
-        title: "Web",
-        collapsable: true,
-        sidebarDepth: 1,
-        children: ["/web/browsers-repository", "/web/url-web"],
-      },
-      {
         title: "Git",
         collapsable: true,
         sidebarDepth: 1,
         children: ["/git/git-basic"],
+      },
+      // {
+      //   title: "JavaScript",
+      //   collapsable: true,
+      //   sidebarDepth: 1,
+      //   children: ["/js/throttle-debounce"],
+      // },
+      // {
+      //   title: "React",
+      //   collapsable: true,
+      //   sidebarDepth: 1,
+      //   children: ["/react/react-optimization"],
+      // },
+      {
+        title: "Web",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          "/web/browser-rendering",
+          "/web/browsers-repository",
+          "/web/url-web",
+        ],
       },
       // {
       //     title: 'Other',
