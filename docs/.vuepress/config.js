@@ -50,12 +50,12 @@ module.exports = {
         sidebarDepth: 1,
         children: ["/git/git-basic"],
       },
-      // {
-      //   title: "JavaScript",
-      //   collapsable: true,
-      //   sidebarDepth: 1,
-      //   children: ["/js/throttle-debounce"],
-      // },
+      {
+        title: "JavaScript",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: ["/js/js-runtime"],
+      },
       // {
       //   title: "React",
       //   collapsable: true,
