@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "vuepress build docs",
-    "dev": "vuepress dev docs",
-    "nav": "vuepress nav docs"
+    "dev": "vuepress dev docs"
   },
   "main": "index.js",
   "license": "MIT",

@@ -56,12 +56,12 @@ module.exports = {
         sidebarDepth: 1,
         children: ["/js/js-runtime"],
       },
-      // {
-      //   title: "React",
-      //   collapsable: true,
-      //   sidebarDepth: 1,
-      //   children: ["/react/react-optimization"],
-      // },
+      {
+        title: "React",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: ["/react/virtual-dom"],
+      },
       {
         title: "Web",
         collapsable: true,

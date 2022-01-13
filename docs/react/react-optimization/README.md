@@ -14,49 +14,49 @@ Hook를 기준으로 성능 최적화에 대해 알아보자.
 
 ## 1. React.memo 컴포넌트 메모제이션
 
-
 ## 2. useMemo
+
 shouldComponentUpdate : 변경된 값만 렌더링 되도록 하기때문에 필요없는 리렌더링을 막을 수 있다.<br><br>
 함수형 컴포넌트에서는 클래스형 컴포넌트의 `shouldComponentUpdate`를 사용할 수 없는데, 공식문서에서는 그 대안으로 useMemo를 제시하고 있다. <br>
 useMemo는 종속 변수들이 변하지 않으면 함수를 다시 호출하지 않고 이전에 반환한 참조값을 재사용하여 컴포넌트의 리렌더링 성늘을 최적화 해줄 수 있다.<br>
 
 ```js
 // Average.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const getAverage = numbers => {
-    const n = numbers.length;
-    if(n === 0) return 0;
-    const sum = numbers.reduce((a, b) => a + b);
-    return sum / n;
-}
+const getAverage = (numbers) => {
+  const n = numbers.length;
+  if (n === 0) return 0;
+  const sum = numbers.reduce((a, b) => a + b);
+  return sum / n;
+};
 
 const Average = () => {
-    const [list, setList] = useState([]);
-    const [number, setNumber] = useState('');
+  const [list, setList] = useState([]);
+  const [number, setNumber] = useState("");
 
-    const onChange = e => setNumber(e.target.value);
-    const onInsert = e => {
-        const nextList = list.concat(parseInt(number));
-        setList(nextList);
-        setNumber('');
-    }
+  const onChange = (e) => setNumber(e.target.value);
+  const onInsert = (e) => {
+    const nextList = list.concat(parseInt(number));
+    setList(nextList);
+    setNumber("");
+  };
 
-    return (
-        <div>
-            <input value={number} onChange={onChange} />
-            <button onClick={onInsert}>추가하기</button>
-            <ul>
-                {list.map((val, idx) => {
-                    <li key={idx}>{val}</li>
-                })}
-            </ul>
-            <div>
-                <b>평균값 :</b> {getAverage(list)}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div>
+      <input value={number} onChange={onChange} />
+      <button onClick={onInsert}>추가하기</button>
+      <ul>
+        {list.map((val, idx) => {
+          <li key={idx}>{val}</li>;
+        })}
+      </ul>
+      <div>
+        <b>평균값 :</b> {getAverage(list)}
+      </div>
+    </div>
+  );
+};
 export default Average;
 ```
 
@@ -66,8 +66,8 @@ useMemo를 사용하면 특정값이 바뀌었을때만 연산을 실행한다.
 import React, { useState, useMemo} from 'react';
 
 const Average = () => {
-    ... 
-    // avg 추가 
+    ...
+    // avg 추가
     const avg = useMemo(() => getAverage(list), [list])
 
     return (
@@ -78,7 +78,6 @@ const Average = () => {
     )
 }
 ```
-
 
 ## 3. useCallback
 
@@ -102,4 +101,3 @@ const Average = () => {
 </div>
 
 <Comment />
-
