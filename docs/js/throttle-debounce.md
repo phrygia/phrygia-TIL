@@ -1,8 +1,8 @@
 ---
-title: "throttle과 debounce"
+title: "throttling과 debouncing"
 ---
 
-## 스로틀 (throttle)
+## throttling (쓰로틀링)
 
 짧은 시간 간격으로 이벤트가 연속해서 발생하더라도 <u>일정 시간 간격으로 이벤트 핸들러가 최대 한 번만 호출되도록</u> 한다. <br>
 즉, 스로틀은 짧은 시간 간격으로 연속해서 발생하는 이벤트를 그릅화해서 일정 시간 단위로 이벤트 핸들러가 호출되도록 호출 주기를 만든다. <br>
@@ -54,6 +54,6 @@ ex ) scroll 이벤트가 짧은 시간 간격으로 연속해서 발생하는 �
 </script>
 ```
 
-## 디바운스 (debounce)
+## debouncing (디바운싱)
 
 <Comment />
