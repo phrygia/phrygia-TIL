@@ -1,9 +1,9 @@
-var dirTree = require("directory-tree");
-var path = require("path");
+const dirTree = require("directory-tree");
+const path = require("path");
 
-let util = (module.exports = {
+const util = (module.exports = {
   getFiles: (name) => {
-    var files = [];
+    let files = [];
     dirTree(
       path.join(__dirname, "../" + name),
       { extensions: /\.md/ },
@@ -13,8 +13,8 @@ let util = (module.exports = {
   },
   getArticles: (name, except) => {
     let articles = [];
-    var root_dirname = path.join(__dirname, "../");
-    var files = util.getFiles(name);
+    const root_dirname = path.join(__dirname, "../");
+    let files = util.getFiles(name);
     files.forEach((item) => {
       if (except !== undefined && item.path.includes(except)) return;
       articles.push(
