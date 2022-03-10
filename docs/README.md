@@ -16,6 +16,9 @@
 </div>
 
 <style>
+.page-edit {
+  display: none;
+}
 .py_tit {
   position: relative;
   z-index: 2;
