@@ -153,13 +153,30 @@ small.from.add ul a, div.from .add ul a
     margin: 0 0 1rem;
     padding: 0.8rem 1rem 0.8rem 1.3rem;
 
-div[class*="language-"] pre, div[class*="language-"] pre[class*="language-"]
+
+div[class*="language-"], div[class*="language-"] *, div[class*="language-"] code
+    font-size: 15.5px;
+
+.theme-default-content:not(.custom), .theme-default-content code
     font-size: 16.5px;
 
-@media (max-width: 419px) 
+.theme-default-content:not(.custom) p 
+    line-height: 1.9;
+
+@media (max-width: 440px) 
     h1 
         font-size: 1.6rem;
     h2
         font-size: 1.3rem;
     main.page 
         font-size: 14.5px;
+    div[class*="language-"] code
+        font-size: 14px;
+    .theme-default-content:not(.custom), .theme-default-content code
+        font-size: 15px;
+    .theme-default-content:not(.custom)
+        padding: 30px 20px 0; 
+    .sidebar-button 
+        left: 10px;
+    .navbar
+        padding-left: 55px !important;
