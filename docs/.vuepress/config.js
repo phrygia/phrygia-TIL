@@ -66,17 +66,17 @@ module.exports = {
         children: getArticles('react')
       },
       {
+        title: 'Redux',
+        collapsable: true,
+        sidebarDepth: 1,
+        children: getArticles('redux')
+      },
+      {
         title: 'Web',
         collapsable: true,
         sidebarDepth: 1,
         children: getArticles('web')
       }
-      // {
-      //     title: 'Other',
-      //     collapsable: false,
-      //     sidebarDepth: 1,
-      //     children: ['/other/about'],
-      // },
     ],
     toggleSidebar: "toggle sidebar",
     toggleDarkMode: "toggle dark mode",
