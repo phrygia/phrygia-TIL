@@ -28,14 +28,14 @@
   position: relative;
   font-family: "Gugi", cursive !important;
   color: #fff;
-  -webkit-text-stroke: 1px #003674;
+  -webkit-text-stroke: 1px rgb(149, 149, 219);
 }
 .py_info {
   text-align: right;
 }
 .py_info a {
   display: block;
-  color: #0075ff;
+  color: rgb(104, 104, 172);
 }
 .py_info h2 {
   border-bottom: 0;
